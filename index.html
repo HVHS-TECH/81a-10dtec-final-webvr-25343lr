@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+    
+</a-text>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@2.1.1/dist/aframe-extras.min.js"></script>
 <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
 <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script> 
@@ -8,16 +10,49 @@
 
   </head>
     <body>
+
     <a-scene>
+
+      
+  <a-text
+    id="welcomeText"
+    value="Welcome to the scene!"
+    position="0.000 2.000 -1.170
+    color="black"
+    align="center"
+    width="6"
+    opacity="1">
+  </a-text>
+  
+    hen add this right before 
+  <script>
+    // Wait 5 seconds, then fade out
+    setTimeout(function() {
+      const text = document.querySelector('#welcomeText');
+      if (text) {
+        text.setAttribute('animation', {
+          property: 'opacity',
+          to: 0,
+          dur: 1000
+        });
+      }
+    }, 4000); // fade starts at 4s, gone by 5s
+  </script>
+  
+  position="0 2 -2"
+
       <a-sky color="lightblue"></a-sky>
       
-      <a-entity ply-model="src: Jeep.ply" position="4.64154 -0.31002 0.53997" rotation="-90 90 180" scale="0.16848 0.17374 0.19045"></a-entity>
+      <<a-entity ply-model="src: hills.ply" position="-6.35424 -1.24254 -3.8026" rotation="-90 90 180"></a-entity>
 
-      <a-entity ply-model="src: hills.ply" position="0 -2.06065 -2" rotation="-90 90 180"></a-entity>
+      <a-entity ply-model="src: hills.ply" position="-6.35424 -1.24254 -3.8026" rotation="-90 90 180"></a-entity>
 
-      <a-entity ply-model="src: birch tree 01.ply" position="7.08954 -0.14374 5.9342" rotation="-90 90 180" scale="0.031 0.031 0.031"></a-entity>
+      <<a-entity ply-model="src: birch tree 01.ply" position="-4.12914 0.92617 -0.9558" rotation="-90 90 180" scale="0.031 0.031 0.031"></a-entity>
 
-      <a-entity ply-model="src: birch tree 01.ply" position="2.40736 0.0148 0.91155" rotation="-90 90 180" scale="0.031 0.031 0.031"></a-entity>
+      <a-entity ply-model="src: birch tree 01.ply" position="1.31483 0.88029 3.56624" rotation="-90 90 180" scale="0.031 0.031 0.031"></a-entity>
+
+      <a-entity ply-model="src: jeep.ply" position="-0.78483 0.72399 -0.79294" rotation="-90 90 180" scale="0.11438 0.08226 0.12167"></a-entity>
+      
     </a-scene>
   </body>
 </html>
